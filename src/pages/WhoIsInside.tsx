@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-d.png";
 import micael from "@/assets/team/micael.png";
+import abbas from "@/assets/team/abbas.jpg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -65,6 +66,12 @@ const teamMembers: TeamMember[] = [
     name: "Micael Craenhals",
     role: "Head of Sociis Experiences™",
     image: micael,
+    category: "board"
+  },
+  {
+    name: "Abbas Fasaei",
+    role: "Head of Sociis Experience™",
+    image: abbas,
     category: "board"
   },
 
