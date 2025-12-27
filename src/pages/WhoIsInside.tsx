@@ -316,13 +316,13 @@ const WhoIsInside = () => {
             Guardians of ethical behavior, integrity and long-term trust.
           </p>
           {/* First row - 4 members */}
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
+          <div className="flex flex-wrap gap-8 mb-8">
             {council.slice(0, 4).map((member, index) => (
               <TeamCard key={member.name} member={member} index={index} />
             ))}
           </div>
           {/* Second row - 3 members */}
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap gap-8">
             {council.slice(4, 7).map((member, index) => (
               <TeamCard key={member.name} member={member} index={index + 4} />
             ))}
