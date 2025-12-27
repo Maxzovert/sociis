@@ -2,9 +2,12 @@ interface SociisSymbolProps {
   size?: number;
   className?: string;
   faint?: boolean;
+  gold?: boolean;
 }
 
-const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbolProps) => {
+const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false }: SociisSymbolProps) => {
+  const strokeColor = gold ? "#B8860B" : "currentColor";
+  
   return (
     <svg
       width={size}
@@ -20,7 +23,7 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
         cy="70"
         rx="85"
         ry="50"
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth={faint ? "1" : "1.5"}
         fill="none"
         opacity={faint ? "0.3" : "1"}
@@ -32,7 +35,7 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
         cy="70"
         rx="90"
         ry="45"
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth={faint ? "0.5" : "0.8"}
         fill="none"
         opacity={faint ? "0.15" : "0.4"}
@@ -45,7 +48,7 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
         cy="70"
         rx="80"
         ry="48"
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth={faint ? "0.5" : "0.8"}
         fill="none"
         opacity={faint ? "0.15" : "0.3"}
@@ -58,7 +61,7 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
         y1="40"
         x2="90"
         y2="100"
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth={faint ? "1.5" : "2"}
         opacity={faint ? "0.3" : "1"}
       />
@@ -67,7 +70,7 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
         y1="40"
         x2="110"
         y2="100"
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth={faint ? "1.5" : "2"}
         opacity={faint ? "0.3" : "1"}
       />
