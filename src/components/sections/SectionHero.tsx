@@ -52,10 +52,8 @@ const SectionHero = () => {
             <h1 
               className="font-sans font-extralight text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
-              <span className="relative">
-                <sup className="absolute -top-4 md:-top-6 left-0 text-xs md:text-sm text-accent tracking-widest">TM</sup>
-                <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
-              </span>
+              <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
+              <sup className="text-xs md:text-sm text-accent align-super -ml-1">TM</sup>
             </h1>
             <p 
               className="font-accent text-2xl md:text-3xl text-foreground font-light italic mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
@@ -102,18 +100,18 @@ const SectionHero = () => {
               
               {/* Outer faint ring with slow pulse */}
               <div className="absolute inset-0 flex items-center justify-center animate-[pulse-slow_4s_ease-in-out_infinite]">
-                <SociisSymbol size={320} className="text-foreground opacity-5" faint />
+                <SociisSymbol size={320} faint gold />
               </div>
               
               {/* Middle ring with gentle float */}
               <div className="animate-[float_6s_ease-in-out_infinite]">
-                <SociisSymbol size={280} className="text-foreground opacity-10" faint />
+                <SociisSymbol size={280} faint gold />
               </div>
               
               {/* Inner symbol with subtle breathe */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="animate-[breathe_8s_ease-in-out_infinite]">
-                  <SociisSymbol size={120} className="text-foreground" />
+                  <SociisSymbol size={120} gold />
                 </div>
               </div>
               
