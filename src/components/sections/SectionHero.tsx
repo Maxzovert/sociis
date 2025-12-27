@@ -52,8 +52,10 @@ const SectionHero = () => {
             <h1 
               className="font-sans font-extralight text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
-              <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
-              <sup className="text-lg text-accent">™</sup>
+              <span className="relative">
+                <sup className="absolute -top-4 md:-top-6 left-0 text-xs md:text-sm text-accent tracking-widest">TM</sup>
+                <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
+              </span>
             </h1>
             <p 
               className="font-accent text-2xl md:text-3xl text-foreground font-light italic mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"

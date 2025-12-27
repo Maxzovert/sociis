@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionHero from "@/components/sections/SectionHero";
-import SectionMark from "@/components/sections/SectionMark";
+
 import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWho from "@/components/sections/SectionWho";
 import SectionWorlds from "@/components/sections/SectionWorlds";
@@ -27,7 +27,7 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Header />
       <SectionHero />
-      <SectionMark />
+      
       <SectionProblem />
       <SectionWho />
       <SectionWorlds />

@@ -8,37 +8,65 @@ const SociisSymbol = ({ size = 40, className = "", faint = false }: SociisSymbol
   return (
     <svg
       width={size}
-      height={size}
-      viewBox="0 0 100 100"
+      height={size * 0.7}
+      viewBox="0 0 200 140"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Outer circle */}
-      <circle
-        cx="50"
-        cy="50"
-        r="45"
+      {/* Main ellipse - organic hand-drawn style */}
+      <ellipse
+        cx="100"
+        cy="70"
+        rx="85"
+        ry="50"
         stroke="currentColor"
         strokeWidth={faint ? "1" : "1.5"}
         fill="none"
         opacity={faint ? "0.3" : "1"}
       />
+      
+      {/* Secondary offset ellipse for organic feel - tilted slightly */}
+      <ellipse
+        cx="100"
+        cy="70"
+        rx="90"
+        ry="45"
+        stroke="currentColor"
+        strokeWidth={faint ? "0.5" : "0.8"}
+        fill="none"
+        opacity={faint ? "0.15" : "0.4"}
+        transform="rotate(-8 100 70)"
+      />
+      
+      {/* Third offset ellipse - tilted other direction */}
+      <ellipse
+        cx="100"
+        cy="70"
+        rx="80"
+        ry="48"
+        stroke="currentColor"
+        strokeWidth={faint ? "0.5" : "0.8"}
+        fill="none"
+        opacity={faint ? "0.15" : "0.3"}
+        transform="rotate(5 100 70)"
+      />
+      
       {/* Two vertical lines - II - representing 1 | 1 */}
       <line
-        x1="40"
-        y1="30"
-        x2="40"
-        y2="70"
+        x1="90"
+        y1="40"
+        x2="90"
+        y2="100"
         stroke="currentColor"
         strokeWidth={faint ? "1.5" : "2"}
         opacity={faint ? "0.3" : "1"}
       />
       <line
-        x1="60"
-        y1="30"
-        x2="60"
-        y2="70"
+        x1="110"
+        y1="40"
+        x2="110"
+        y2="100"
         stroke="currentColor"
         strokeWidth={faint ? "1.5" : "2"}
         opacity={faint ? "0.3" : "1"}
