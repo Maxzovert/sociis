@@ -100,9 +100,9 @@ const SectionHero = () => {
                 </div>
               </div>
               
-              {/* Main symbol - clean, minimal */}
+              {/* Main symbol - clean, minimal with animated ellipses */}
               <div className="relative">
-                <SociisSymbol size={240} className="text-foreground/80" />
+                <SociisSymbol size={240} className="text-foreground/80" animated />
               </div>
             </div>
           </div>
