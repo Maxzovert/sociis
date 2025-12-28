@@ -3,9 +3,10 @@ interface SociisSymbolProps {
   className?: string;
   faint?: boolean;
   gold?: boolean;
+  animated?: boolean;
 }
 
-const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false }: SociisSymbolProps) => {
+const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false, animated = false }: SociisSymbolProps) => {
   const strokeColor = gold ? "#B8860B" : "currentColor";
   
   return (
@@ -17,6 +18,26 @@ const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false }
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
+      <style>
+        {`
+          @keyframes ellipse-drift-1 {
+            0%, 100% { transform: rotate(-8deg) translateX(0); }
+            50% { transform: rotate(-5deg) translateX(3px); }
+          }
+          @keyframes ellipse-drift-2 {
+            0%, 100% { transform: rotate(5deg) translateY(0); }
+            50% { transform: rotate(8deg) translateY(-3px); }
+          }
+          @keyframes ellipse-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+          }
+          .ellipse-1 { animation: ellipse-drift-1 8s ease-in-out infinite; transform-origin: center; }
+          .ellipse-2 { animation: ellipse-drift-2 10s ease-in-out infinite; transform-origin: center; }
+          .ellipse-main { animation: ellipse-pulse 6s ease-in-out infinite; }
+        `}
+      </style>
+      
       {/* Main ellipse - organic hand-drawn style */}
       <ellipse
         cx="100"
@@ -27,33 +48,38 @@ const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false }
         strokeWidth={faint ? "1" : "1.5"}
         fill="none"
         opacity={faint ? "0.3" : "1"}
+        className={animated ? "ellipse-main" : ""}
       />
       
       {/* Secondary offset ellipse for organic feel - tilted slightly */}
-      <ellipse
-        cx="100"
-        cy="70"
-        rx="90"
-        ry="45"
-        stroke={strokeColor}
-        strokeWidth={faint ? "0.5" : "0.8"}
-        fill="none"
-        opacity={faint ? "0.15" : "0.4"}
-        transform="rotate(-8 100 70)"
-      />
+      <g className={animated ? "ellipse-1" : ""} style={{ transformOrigin: '100px 70px', transform: animated ? undefined : 'rotate(-8deg)' }}>
+        <ellipse
+          cx="100"
+          cy="70"
+          rx="90"
+          ry="45"
+          stroke={strokeColor}
+          strokeWidth={faint ? "0.5" : "0.8"}
+          fill="none"
+          opacity={faint ? "0.15" : "0.4"}
+          transform={animated ? undefined : "rotate(-8 100 70)"}
+        />
+      </g>
       
       {/* Third offset ellipse - tilted other direction */}
-      <ellipse
-        cx="100"
-        cy="70"
-        rx="80"
-        ry="48"
-        stroke={strokeColor}
-        strokeWidth={faint ? "0.5" : "0.8"}
-        fill="none"
-        opacity={faint ? "0.15" : "0.3"}
-        transform="rotate(5 100 70)"
-      />
+      <g className={animated ? "ellipse-2" : ""} style={{ transformOrigin: '100px 70px', transform: animated ? undefined : 'rotate(5deg)' }}>
+        <ellipse
+          cx="100"
+          cy="70"
+          rx="80"
+          ry="48"
+          stroke={strokeColor}
+          strokeWidth={faint ? "0.5" : "0.8"}
+          fill="none"
+          opacity={faint ? "0.15" : "0.3"}
+          transform={animated ? undefined : "rotate(5 100 70)"}
+        />
+      </g>
       
       {/* Two vertical lines - II - representing 1 | 1 */}
       <line
