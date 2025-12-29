@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Import team photos - Board
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-new.jpg";
-import micael from "@/assets/team/micael-new.jpg";
+
 import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
 import mikkel from "@/assets/team/mikkel.jpg";
@@ -63,13 +63,6 @@ const teamMembers: TeamMember[] = [
     role: "Chief Behavioural Officer (CBO)",
     image: dominiqueD,
     category: "board"
-  },
-  {
-    name: "George Reyes",
-    role: "Head of Sociis Experiences™",
-    image: micael,
-    category: "board",
-    imagePosition: "center 30%"
   },
   {
     name: "Abbas Fasaei",
