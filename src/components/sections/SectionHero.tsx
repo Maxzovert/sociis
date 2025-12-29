@@ -46,14 +46,14 @@ const SectionHero = () => {
             {/* Animated accent line */}
             <div className="flex items-center gap-4 mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]">
               <div className="w-12 h-px bg-accent animate-[shimmer_2s_ease-in-out_infinite]" style={{ backgroundSize: '200% 100%', backgroundImage: 'linear-gradient(90deg, transparent, hsl(var(--accent)), transparent)' }}></div>
-              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Est. 2024</span>
+              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
             </div>
             
             <h1 
               className="font-sans font-extralight text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
-              <sup className="text-xs md:text-sm text-accent align-super -ml-1">TM</sup>
+              <sup className="text-[0.5rem] md:text-[0.6rem] text-accent align-super -ml-1">TM</sup>
             </h1>
             <p 
               className="font-accent text-2xl md:text-3xl text-foreground font-light italic mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
