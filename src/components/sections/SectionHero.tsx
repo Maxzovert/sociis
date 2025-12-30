@@ -1,7 +1,28 @@
+import { useEffect, useRef, useState } from "react";
 import SociisSymbol from "../SociisSymbol";
 import heroEarth from "@/assets/hero-earth.jpg";
 
 const SectionHero = () => {
+  const markRef = useRef<HTMLDivElement>(null);
+  const [isMarkVisible, setIsMarkVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsMarkVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (markRef.current) {
+      observer.observe(markRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       {/* Animated background */}
@@ -107,9 +128,22 @@ const SectionHero = () => {
             </div>
             
             {/* The Mark explanation */}
-            <div className="mt-8 text-center max-w-xs opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]">
-              <p className="text-xs tracking-widest text-muted-foreground uppercase mb-2">The Mark — ◎ II (1 | 1)</p>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed">
+            <div 
+              ref={markRef}
+              className={`mt-8 text-center max-w-xs transition-all duration-1000 ease-out ${
+                isMarkVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-4'
+              }`}
+            >
+              <p className={`text-xs tracking-widest text-muted-foreground uppercase mb-2 transition-all duration-700 delay-200 ${
+                isMarkVisible ? 'opacity-100' : 'opacity-0'
+              }`}>
+                The Mark — ◎ II (1 | 1)
+              </p>
+              <p className={`text-xs text-muted-foreground/70 leading-relaxed transition-all duration-700 delay-500 ${
+                isMarkVisible ? 'opacity-100' : 'opacity-0'
+              }`}>
                 Two complete individuals, equal, side by side. No one above, no one below. 
                 Impact created with people, not on top of people.
               </p>
