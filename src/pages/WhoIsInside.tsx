@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Import team photos - Board
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-new.jpg";
-
+import micaelC from "@/assets/team/micael-c.jpg";
 import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
 import mikkel from "@/assets/team/mikkel.jpg";
@@ -62,6 +62,12 @@ const teamMembers: TeamMember[] = [
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer (CBO)",
     image: dominiqueD,
+    category: "board"
+  },
+  {
+    name: "Micael Craenhals",
+    role: "Head of SOCIIS™",
+    image: micaelC,
     category: "board"
   },
   {
