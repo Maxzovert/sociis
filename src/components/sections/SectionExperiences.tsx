@@ -1,46 +1,25 @@
-import { useEffect, useRef } from "react";
-import charityVideo from "@/assets/charity-video.mp4";
 import experienceDinner from "@/assets/experience-dinner.jpg";
 import experienceGala from "@/assets/experience-gala.jpg";
 import experienceFestival from "@/assets/experience-festival.jpg";
 
 const SectionExperiences = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {
-            // Autoplay was prevented, user interaction required
-          });
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
   const experiences = [
     {
       name: "The 22",
-      description: "One table. Twenty-two leaders. High-stakes, high-trust conversations.",
+      subtitle: "Leadership Table",
+      description: "One table. One conversation. Leadership clarity.",
       image: experienceDinner,
     },
     {
       name: "The 64",
-      description: "Intimate, cultural evenings — hospitality as a stage for conduct.",
+      subtitle: "A curated boutique gathering",
+      description: "An intentionally limited circle where culture and conduct meet.",
       image: experienceGala,
     },
     {
       name: "The 300",
-      description: "Immersive experiences where light, sound and story merge at sites like Tomorrowland with Love Tomorrow.",
+      subtitle: "Immersive cultural experience",
+      description: "Where light, sound and story converge to amplify behaviour at scale. In collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
       image: experienceFestival,
     },
   ];
@@ -88,9 +67,12 @@ const SectionExperiences = () => {
                   <span className="inline-block text-accent text-sm tracking-widest mb-3 opacity-60">
                     0{index + 1}
                   </span>
-                  <h3 className="font-accent text-3xl md:text-4xl text-foreground italic mb-4 hover:text-accent transition-colors duration-300">
+                  <h3 className="font-accent text-3xl md:text-4xl text-foreground italic mb-2 hover:text-accent transition-colors duration-300">
                     {exp.name}
                   </h3>
+                  <p className="text-sm text-muted-foreground tracking-wide mb-4">
+                    {exp.subtitle}
+                  </p>
                   <p className="text-body text-muted-foreground leading-relaxed max-w-md">
                     {exp.description}
                   </p>
@@ -103,46 +85,21 @@ const SectionExperiences = () => {
             ))}
           </div>
 
-          {/* Charity Video Section */}
+          {/* Humanity in Action Section */}
           <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
             <div className="relative mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent"></div>
                 <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
-                  Making an Impact
+                  Purpose in Practice
                 </p>
               </div>
               <h3 className="font-accent text-2xl md:text-3xl text-foreground italic mb-2">
-                Charity Fundraising
+                Humanity in Action
               </h3>
               <p className="text-body text-muted-foreground max-w-lg">
-                Where purpose meets presence — experiences designed to create lasting change.
+                Behaviour translated into lived responsibility through culture and aligned humanitarian collaborations.
               </p>
-            </div>
-            
-            <div className="relative group">
-              {/* Video container with decorative elements */}
-              <div className="relative">
-                {/* Corner decorations */}
-                <div className="absolute -top-2 -left-2 w-8 h-8 border-l-2 border-t-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-2 border-b-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="relative aspect-video overflow-hidden bg-muted/20">
-                  <video
-                    ref={videoRef}
-                    src={charityVideo}
-                    controls
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  
-                  {/* Gradient overlay on edges */}
-                  <div className="absolute inset-0 pointer-events-none border border-border/20"></div>
-                </div>
-              </div>
             </div>
           </div>
 

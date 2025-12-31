@@ -20,9 +20,7 @@ const SectionHouse = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-12">
-            In collaboration with <span className="text-foreground font-medium">Podeo</span> and their 350M audience,
-            House content — audio, stories, reflections —
-            reaches far beyond the private rooms where it was born.
+            House content — audio, stories, reflections — is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, reaching far beyond the private rooms where it was born.
           </p>
 
           {/* CTAs */}
