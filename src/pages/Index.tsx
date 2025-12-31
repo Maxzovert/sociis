@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import SectionHero from "@/components/sections/SectionHero";
 
 import SectionProblem from "@/components/sections/SectionProblem";
@@ -48,6 +49,7 @@ const Index = () => {
       <SectionMedia />
       <SectionAccess />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };
