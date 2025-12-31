@@ -13,7 +13,7 @@ const SectionCollections = () => {
 
           <div className="space-y-6 mb-10">
             <p className="text-body text-muted-foreground">
-              <span className="text-foreground font-medium">Let There Be Light™</span> — the emotional anthem, premiering in London.
+              <span className="text-foreground font-medium">Let There Be Light™</span> — a cultural framework translating values into lived behaviour, amplified with Under One Sky and aligned collaborators.
             </p>
             <p className="text-body text-muted-foreground">
               <span className="text-foreground font-medium">The LIME Book</span> — The Balance Between Life and Time — launched on the Orient Express.

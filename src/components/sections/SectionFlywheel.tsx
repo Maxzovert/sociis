@@ -35,7 +35,7 @@ const SectionFlywheel = () => {
             <p>Emotion becomes story.</p>
             <p>Story becomes learning in House.</p>
             <p>Learning spreads through the Network.</p>
-            <p>The Standard turns it into something measurable.</p>
+            <p>The Standard turns it into something accountable.</p>
             <p>Impact becomes visible.</p>
             <p>New, higher experiences are created.</p>
           </div>
