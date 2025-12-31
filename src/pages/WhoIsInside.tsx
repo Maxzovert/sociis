@@ -83,12 +83,6 @@ const teamMembers: TeamMember[] = [
     image: rudi,
     category: "board"
   },
-  {
-    name: "Georges Reyes",
-    role: "Cultural & Charity Steward",
-    image: mikkel,
-    category: "steward"
-  },
 
   // The Council
   {
@@ -228,12 +222,6 @@ const teamMembers: TeamMember[] = [
     category: "steward"
   },
   {
-    name: "Nick Ede",
-    role: "Branding & Culture Expert",
-    image: nick,
-    category: "steward"
-  },
-  {
     name: "Kavita Rathore",
     role: "CSR Director and Board Member of Blessing Foundation",
     image: kavita,
@@ -249,6 +237,12 @@ const teamMembers: TeamMember[] = [
     name: "Jean Bosco Safari",
     role: "Singer",
     image: jeanBosco,
+    category: "steward"
+  },
+  {
+    name: "Georges Reyes",
+    role: "Cultural & Charity Steward",
+    image: mikkel,
     category: "steward"
   },
 ];
