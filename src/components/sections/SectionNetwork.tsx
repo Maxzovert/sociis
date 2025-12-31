@@ -1,4 +1,4 @@
-import networkImage from "@/assets/network-leaders.jpg";
+import networkImage from "@/assets/network-space.jpg";
 
 const SectionNetwork = () => {
   return (

@@ -1,4 +1,4 @@
-import impactImage from "@/assets/impact-leadership.jpg";
+import impactImage from "@/assets/impact-contemplation.jpg";
 
 const SectionImpact = () => {
   return (

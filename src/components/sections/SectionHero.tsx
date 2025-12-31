@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import SociisSymbol from "../SociisSymbol";
-import heroEarth from "@/assets/hero-earth.jpg";
+import heroEarth from "@/assets/hero-earth-new.jpg";
 
 const SectionHero = () => {
   const markRef = useRef<HTMLDivElement>(null);

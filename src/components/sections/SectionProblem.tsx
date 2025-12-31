@@ -1,4 +1,4 @@
-import problemImage from "@/assets/problem-contrast.jpg";
+import problemImage from "@/assets/problem-texture.jpg";
 
 const SectionProblem = () => {
   return (
