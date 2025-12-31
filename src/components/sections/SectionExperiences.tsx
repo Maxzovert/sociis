@@ -1,9 +1,32 @@
+import { useEffect, useRef } from "react";
 import charityVideo from "@/assets/charity-video.mp4";
 import experienceDinner from "@/assets/experience-dinner.jpg";
 import experienceGala from "@/assets/experience-gala.jpg";
 import experienceFestival from "@/assets/experience-festival.jpg";
 
 const SectionExperiences = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {
+            // Autoplay was prevented, user interaction required
+          });
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
   const experiences = [
     {
       name: "The 22",
@@ -106,10 +129,12 @@ const SectionExperiences = () => {
                 
                 <div className="relative aspect-video overflow-hidden bg-muted/20">
                   <video
+                    ref={videoRef}
                     src={charityVideo}
                     controls
+                    muted
+                    playsInline
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                    poster=""
                   >
                     Your browser does not support the video tag.
                   </video>
