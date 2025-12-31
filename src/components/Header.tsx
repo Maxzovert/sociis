@@ -102,11 +102,9 @@ const Header = () => {
           {/* House CTA - Primary */}
           <div className="hidden lg:flex items-center gap-6">
             <a
-              href="#house"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("/#house");
-              }}
+              href="https://www.sociis.house/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-colors"
             >
               Join Sociis House
@@ -151,12 +149,11 @@ const Header = () => {
                 )
               ))}
               <a
-                href="#house"
+                href="https://www.sociis.house/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-lg hover:bg-foreground/90 transition-colors mt-4"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("/#house");
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Join Sociis House
               </a>
