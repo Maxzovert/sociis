@@ -73,7 +73,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Abbas Fasaei",
-    role: "Head of Sociis Experience™",
+    role: "Head of Sociis House™",
     image: abbas,
     category: "board"
   },
