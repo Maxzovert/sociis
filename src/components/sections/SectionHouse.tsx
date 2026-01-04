@@ -6,9 +6,10 @@ const SectionHouse = () => {
           <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
             Public Entry Point
           </p>
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
+          <h2 className="font-sans font-light text-4xl md:text-5xl text-foreground tracking-tight mb-6">
             Sociis House™
           </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="font-accent text-2xl text-foreground italic mb-8">
             Sociis House™ is where Impact scales.
