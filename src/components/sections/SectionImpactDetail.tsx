@@ -3,9 +3,10 @@ const SectionImpactDetail = () => {
     <section id="impact-detail" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
+          <h2 className="font-sans font-light text-4xl md:text-5xl text-foreground tracking-tight mb-6">
             Sociis Impact™
           </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-8">
             Sociis Impact™ develops and deploys <span className="text-foreground font-medium">SBS™</span>,
